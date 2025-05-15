@@ -48,6 +48,10 @@ This Android application estimates the GPS coordinates of a target image by leve
 
 For a more detailed explanation of how the SIFT algorithm is specifically used in this project, please see [SIFT Implementation Details](./SIFT_DETAILS.md).
 
+## Building from Source
+
+For instructions on how to clone the repository, set up your environment, and build the project from source, please see [Building from Source](./BUILDING.md).
+
 ## Core Libraries Used
 
 *   **OpenCV for Android**: Used for SIFT feature detection, description, and matching (`org.opencv.features2d.SIFT`, `org.opencv.features2d.DescriptorMatcher`).
