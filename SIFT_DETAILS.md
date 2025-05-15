@@ -75,6 +75,19 @@ SIFT features play a crucial role in the GPS prediction phase, which occurs in t
 
 *   **Weighted GPS Averaging**: The number of good SIFT matches (`goodMatchesCount`) serves as a weight. The predicted GPS coordinates for the target image are calculated as a weighted average of the GPS coordinates of all reference images. Reference images that share more good matches (i.e., are more visually similar according to SIFT) with the target image have a greater influence on the final predicted location.
 
+    The formula used for this weighted average is:
+
+    ```latex
+    $$
+    \text{Predicted\_GPS} = \frac{\sum_{i} (\text{Number of Matches}_i \times \text{GPS Coordinates}_i)}{\sum_{i} \text{Number of Matches}_i}
+    $$
+    ```
+    Where:
+    *   `Predicted_GPS` is the final estimated GPS coordinate (both latitude and longitude are calculated this way independently).
+    *   `Number of Matches_i` is the count of good SIFT matches between the target image and the reference image `i`.
+    *   `GPS Coordinates_i` is the known GPS coordinate (latitude or longitude) of the reference image `i`.
+    *   The sum `\sum_{i}` is over all reference images that have GPS data.
+
 ## Summary
 
 In this project, SIFT is used as a robust feature detector and descriptor to find distinctive, invariant features in images. These features are then matched between a target image and a set of reference images. The quantity of good matches provides a measure of visual similarity, which is subsequently used to weight the contribution of reference image GPS coordinates in predicting the location of the target image. 
