@@ -44,6 +44,10 @@ This Android application estimates the GPS coordinates of a target image by leve
 *   Background processing for SIFT extraction to maintain UI responsiveness.
 *   Dynamic image resizing to manage memory and performance.
 
+## Technical Details
+
+For a more detailed explanation of how the SIFT algorithm is specifically used in this project, please see [SIFT Implementation Details](./SIFT_DETAILS.md).
+
 ## Core Libraries Used
 
 *   **OpenCV for Android**: Used for SIFT feature detection, description, and matching (`org.opencv.features2d.SIFT`, `org.opencv.features2d.DescriptorMatcher`).
