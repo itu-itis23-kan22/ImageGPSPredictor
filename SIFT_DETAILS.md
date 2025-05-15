@@ -77,11 +77,10 @@ SIFT features play a crucial role in the GPS prediction phase, which occurs in t
 
     The formula used for this weighted average is:
 
-    ```latex
     $$
     \text{Predicted\_GPS} = \frac{\sum_{i} (\text{Number of Matches}_i \times \text{GPS Coordinates}_i)}{\sum_{i} \text{Number of Matches}_i}
     $$
-    ```
+
     Where:
     *   `Predicted_GPS` is the final estimated GPS coordinate (both latitude and longitude are calculated this way independently).
     *   `Number of Matches_i` is the count of good SIFT matches between the target image and the reference image `i`.
